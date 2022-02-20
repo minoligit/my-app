@@ -11,7 +11,7 @@ const fs = require('fs');
 
 fs.readFile('./songs.json','utf-8',(err,jsonString)=>{
     if(err){
-        console.log('Error');
+        console.log('Error ');
     }
     else{
         console.log(jsonString);
