@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom
 import Introduction from './components/introduction';
 import NaviBar from './components/navibar';
 import Music from './components/music';
-import AddElement from './components/addElement';
+import Places from './components/places';
 
 function App() {
   return (
@@ -11,9 +11,10 @@ function App() {
       <div className='NaviBar'>
         <Router>
           <NaviBar />
-          {/* <Routes>
-            <Route path='./music' element={<Music/>} />
-          </Routes> */}
+          <Routes>
+            <Route path='/components/music' element={<Music/>} />
+            <Route path='/components/places' exact component={Places} />
+          </Routes>
         </Router>  
       </div>
       <header className="App-header">
@@ -28,7 +29,7 @@ function App() {
       <br/><br/>
       <div className='AddElement'>
         <Music /><br/><br/>
-        <AddElement />
+        <Places />
       </div>
     </div>
   
