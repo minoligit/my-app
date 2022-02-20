@@ -1,0 +1,62 @@
+.App {
+  background-color: rgb(253, 255, 255);
+  padding-left: 10%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #4066b9;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: white;
+  padding: 2vmax;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.NaviBar{
+  background-color: darkblue;
+  color: white;
+  font: 1.5em sans-serif;
+  padding: 2% 2% 2% 2%;
+  height: 10vmin;
+}
+.Body{
+  font: 2em sans-serif;
+  justify-content: left;
+  padding: 10vmin;
+}
+.Introduction{
+  border: #0f0f0f solid 3px ;
+  font: 2em sans-serif;
+  padding: 20px;
+  width: 50%;
+}
+.AddElement{
+  justify-content: left;
+}
