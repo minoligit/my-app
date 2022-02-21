@@ -9,6 +9,9 @@ function Places(){
             height: "10vh",
             alignItems: "center"
         };
+        const listStyle = {
+            fontSize: "1.5em"
+        };
 
         useEffect( () =>{
             fetchItems();
@@ -22,11 +25,11 @@ function Places(){
         }
 
         return(
-         <div>
+         <div style={listStyle}>
              <h1 style={h1Style}>My Places</h1>
              {
                  items.map(item => (
-                     <div>{item.id + " - " + item.place + " by " + item.address}</div>
+                     <div>{item.id + " - " + item.place + " in " + item.address}</div>
                  ))
              }
          </div>
