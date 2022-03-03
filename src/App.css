@@ -1,6 +1,6 @@
 .App {
   background-color: rgb(253, 255, 255);
-  padding-left: 10%;
+  color: black;
 }
 
 .App-logo {
@@ -16,18 +16,64 @@
 
 .App-header {
   background-color: #4066b9;
+  color: white;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: white;
   padding: 2vmax;
 }
 
 .App-link {
   color: #61dafb;
+}
+.h1Style {
+  background-color: #4066b9;
+  color: white;
+  height: 10vh;
+}
+#tableStyle{
+  border: 1px solid black;
+  padding: 5vh;
+  width: 100%;
+  border-collapse: collapse;
+}
+#tableStyle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #9690eb;
+  color: rgb(5, 5, 5);
+}
+#tableStyle tr:nth-child(even){
+  background-color: #d3d3f1;
+}
+#tableStyle tr:hover{
+  color: rgb(50, 98, 189);
+}
+.formStyle{
+  background-color: LightBlue;
+  padding: 25px 50px;
+  font-style: sansSerif;
+  width: 50%;
+}
+.linkStyle{
+  color: white;
+  text-decoration: none;
+}
+link:hover{
+  color: black;
+}
+.h2Style{
+  justify-content: center;
+}
+#dashLabel{
+  background-color:darkblue;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5vh;
 }
 
 @keyframes App-logo-spin {
@@ -41,22 +87,39 @@
 
 .NaviBar{
   background-color: darkblue;
-  color: white;
   font: 1.5em sans-serif;
-  padding: 2% 2% 2% 2%;
+  padding: 4vh 0vh 4vh 30vh;
   height: 10vmin;
 }
+.SideBar{
+  background-color: white;
+  color: black;
+  font: 1.5em sans-serif;
+  padding: 5vh;
+  height: 100vh;
+  width: 30vh;
+  position: fixed;
+  overflow: auto;
+}
 .Body{
-  font: 2em sans-serif;
-  justify-content: left;
-  padding: 10vmin;
+  color: black;
 }
 .Introduction{
   border: #0f0f0f solid 3px ;
-  font: 2em sans-serif;
   padding: 20px;
-  width: 50%;
+  width: 75%;
 }
 .AddElement{
   justify-content: left;
+}
+.DashBoard{
+  border: #020202 solid 5px;
+  border-radius: 15px;
+  width: 70%;
+}
+.DashElement{
+  background-color: white;
+}
+.Content{
+  padding-left: 5%;
 }

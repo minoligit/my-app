@@ -1,0 +1,21 @@
+#dashHead{
+    background-color:lightcoral;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font: 1.5em sans-serif;
+    text-align: center;
+    height: 15vh;
+    padding: 10px;
+}
+#section1{
+    background-color: rgb(127, 140, 216);
+    padding: 20px;
+    height: 30vh;
+}
+#section2{
+    background-color: rgb(173, 83, 218);  
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 30vh;
+}

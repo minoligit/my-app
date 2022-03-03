@@ -1,36 +1,41 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
-import Introduction from './components/introduction';
+import { BrowserRouter as Router, Routes, Route, NavBar, NavLink} from 'react-router-dom';
 import NaviBar from './components/navibar';
-import Music from './components/music';
-import Places from './components/places';
+import Home from './Pages/home';
+import AboutMe from './Pages/aboutme';
+import Music from './Pages/music';
+import Places from './Pages/places';
+import People from './Pages/people';
+import SideBar from './components/sidebar';
+import DashPage from './Pages/dashpage';
 
 function App() {
   return (
     <div className="App">
-      <div className='NaviBar'>
-        <Router>
-          <NaviBar />
-          <Routes>
-            <Route path='/components/music' element={<Music/>} />
-            <Route path='/components/places' exact component={Places} />
-          </Routes>
-        </Router>  
-      </div>
-      <header className="App-header">
-        <h1>Welcome to My App !!!</h1>
+      <header className='NaviBar'>
+        <div className='Body'>
+          <Router>
+            <NaviBar />
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route path='/Pages/home' element={<Home />} />
+                <Route path='/Pages/dashpage' element={<DashPage />} />
+                <Route path='/Pages/aboutme' element={<AboutMe />} />
+                <Route path='/Pages/people' element={<People />} />
+                <Route path='/Pages/music' element={<Music />} />
+                <Route path='/Pages/places' element={<Places />} />
+              </Routes>
+          </Router>  
+        </div>
       </header>
-      <div className='Body'>
-        <p>This is my first react application</p>
-      </div>
-      <div className='Introduction'>
-        <Introduction />
-      </div>
-      <br/><br/>
-      <div className='AddElement'>
-        <Music /><br/><br/>
-        <Places />
-      </div>
+      {/* <div className='SideBar'>
+        <Router>
+          <SideBar />
+            <Routes>
+              <Route path='/Pages/dashpage' element={<DashPage />} />
+            </Routes>
+        </Router>
+      </div> */}
     </div>
   
   );
