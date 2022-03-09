@@ -1,5 +1,5 @@
 #dashHead{
-    background-color:lightcoral;
+    background-color:rgb(247, 176, 225);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font: 1.5em sans-serif;
@@ -8,12 +8,12 @@
     padding: 10px;
 }
 #section1{
-    background-color: rgb(127, 140, 216);
+    background-color: rgb(185, 193, 238);
     padding: 20px;
     height: 30vh;
 }
 #section2{
-    background-color: rgb(173, 83, 218);  
+    background-color: rgb(179, 179, 182);  
     padding: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;

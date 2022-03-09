@@ -18,6 +18,7 @@
   background-color: #4066b9;
   color: white;
   min-height: 10vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,12 +54,6 @@
 #tableStyle tr:hover{
   color: rgb(50, 98, 189);
 }
-.formStyle{
-  background-color: LightBlue;
-  padding: 25px 50px;
-  font-style: sansSerif;
-  width: 50%;
-}
 .linkStyle{
   color: white;
   text-decoration: none;
@@ -69,12 +64,36 @@ link:hover{
 .h2Style{
   justify-content: center;
 }
+#closeBtn{
+  background-color: aliceblue;
+  justify-self: right;
+}
+#closeBtn :hover{
+  color: red;
+}
 #dashLabel{
   background-color:darkblue;
   color: white;
   border-radius: 8px;
   padding: 0.5vh;
 }
+#addInput{
+  width: 50%;
+  height: 10%;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+#mediumModal{
+  width: 50%;
+  height: 75%;
+  border-radius: 15px;
+  justify-content: center;
+}
+#mediumModel ::backdrop{
+  background: #cac7c7;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -90,6 +109,7 @@ link:hover{
   font: 1.5em sans-serif;
   padding: 4vh 0vh 4vh 30vh;
   height: 10vmin;
+  width: 100%;
 }
 .SideBar{
   background-color: white;
@@ -107,10 +127,40 @@ link:hover{
 .Introduction{
   border: #0f0f0f solid 3px ;
   padding: 20px;
-  width: 75%;
+  width: 100%;
 }
-.AddElement{
+#AddElement{
+  background-color: LightBlue;
+  border-radius: 8px;
+  padding: 25px 50px;
+  font-style: sansSerif;
+  width: 75%;
   justify-content: left;
+  align-self: center;
+  line-height: 200%;
+}
+/* #AddElement h3{
+  align-items: center;
+  background-color: dodgerblue;
+  width: 80%;
+  height: 20%;
+} */
+#aboutMe{
+  width: 100%;
+}
+#aboutMe label{
+  width: 15%;
+  line-height: 200%;
+  background-color: powderblue;
+  border: #5791a3 inset 5px;
+  border-radius: 5px;
+  padding-left: 1%;
+}
+#searchBar{
+  border-radius: 5px;
+  align-content: right;
+  width: 60%;
+  height: 50px;
 }
 .DashBoard{
   border: #020202 solid 5px;

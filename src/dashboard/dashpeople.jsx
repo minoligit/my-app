@@ -12,13 +12,13 @@ function DashPeople(){
         //     setPopularPeople(res.data);
         // });
         Axios.get("http://localhost:8080/richPeople").then((res) => {
-            setRichPeople(res.data);
+            setRichPeople(res.data[0]);
         });
     }, []);
     
     return(
         <div>
-            <div id="dashHead">My Music</div>
+            <div id="dashHead">My People</div>
             <section id="section1">
                 <h3>Popularity</h3>
                 {/* {popularPeople.slice(0,3).map(data => (
@@ -26,7 +26,7 @@ function DashPeople(){
                 ))} */}
             </section>
             <section id="section2">
-                <h3>Mode</h3>
+                <h3>Wealth</h3>
                 {richPeople.slice(0,3).map(data => (
                     <div>{richPeople.indexOf(data.Name)+" - "+data.Name+" "+data.Worth_USD}<br/><br/></div>
                 ))}

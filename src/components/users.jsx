@@ -12,12 +12,15 @@ function Users(){
         });
     }, []); 
 
-    // const deleteUser = (value) => {
-    //     Axios.delete("http://localhost:8080/deleteUser/",{data:{user_id:value}}).then((res) => {
-    //         setUsersList(res.data);
-    //         alert("User added Successfully");
-    //     });
-    // };
+    const deleteUser = (value) => {
+        const str = {
+            userId: value
+        }
+        Axios.delete("http://localhost:8080/deleteUser",str).then((res) => {
+            setUsersList(res.data);
+            alert("User deleted Successfully");
+        });
+    };
 
     return(
         <div>
@@ -37,9 +40,9 @@ function Users(){
                         <td>{data.user_name}</td>
                         <td>{data.address}</td>
                         <td>{data.occupation}</td>
-                        <td><button className="btn btn-success">View</button></td>
+                        <td></td>
                         <td><button className="btn btn-primary">Edit</button></td>
-                        <td><button className="btn btn-danger" /*onClick={()=>deleteUser(data.user_id)}*/>Delete</button></td>
+                        <td><button className="btn btn-danger" onClick={()=>deleteUser(data.user_id)}>Delete</button></td>
                     </tr>
                     ))}
                 </tbody>

@@ -1,37 +1,48 @@
-import React, {useEffect,useState} from "react";
+import React, {useState} from "react";
 import '../App.css';
 import Axios from 'axios';
 
 function AboutMe() {
 
+    const [user_name,setUserName] = useState("");
     const [userInfo, setUserInfo] = useState([]);
 
-    useEffect(() => {
-        Axios.get("http://localhost:8080/searchUser").then((res) => {
-            setUserInfo(res.data);
+    const submitUser = () => {
+        const str = {
+            userName: user_name
+        }
+        Axios.post("http://localhost:8080/searchUser",str).then((res) => {
+            setUserInfo(res.data[0]);
         });
-    }, []);
+    };  
 
 	return (
-		<div><h1 className='App-header'>My App - About Me</h1><br/><br/><br/><br/>
-            <div className="Content">
+		<div><h1 className='App-header'>My App - About Me</h1><br/><br/>
+            <div className="Content" id="aboutMe">
+                <div>
+                    <input id="searchBar" type="text" name="user_name" placeholder="Enter the username"
+                    onChange={(e)=>{setUserName(e.target.value)}}/>
+                    <button type="submit" value="submit"  className="btn btn-primary" 
+                    onClick={submitUser}>Search</button><br/>
+                </div><br/><br/><br/><br/>
                 {userInfo.map(data => (
                 <div key={data.user_id} >
                 <table>
                     <tr>
-                        <th>
+                        <td width="50%"></td>
+                        <td  width="50%">
                             <div className='Introduction'>
                                 {"Hii, Welcome to my page."}<br/>
                                 {"I'm "+data.user_name+" from "+data.address+"."}<br/><br/>
                                 {"You can view my information here."}
                             </div>
-                        </th>
+                        </td>
                     </tr>
                 </table><br/><br/>
-                <label>Occupation :</label>{data.occupation}<br/>
-                <label>School/College :</label>{data.school}<br/>
-                <label>Higher Education :</label>{data.higherEdu}<br/>
-                <label>Work At : </label>{data.workPlace}<br/>
+                <label>Occupation</label>{data.occupation}<br/><br/>
+                <label>School/College</label>{data.school}<br/><br/>
+                <label>Higher Education</label>{data.higherEdu}<br/><br/>
+                <label>Work At</label>{data.workPlace}<br/><br/>
                 </div>))}
             </div>
         </div>
